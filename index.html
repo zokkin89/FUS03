@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>모바일 웹카페</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="logo">
+            <a href="#">
+                <img src="images/logo.png" alt="web cafe">
+            </a>
+        </h1>
+        <nav class="navigation" aria-label="메인 메뉴">
+            <div class="menubar-container">
+                <button class="btn-menubar">메인 메뉴 보기</button>
+                <span class="menubar menubar-top"></span>
+                <span class="menubar menubar-middle"></span>
+                <span class="menubar menubar-bottom"></span>
+            </div>
+            <ul class="main-menu">
+                <li><a href="#">소개</a></li>
+                <li><a href="#">갤러리</a></li>
+                <li><a href="#">게시판</a></li>
+                <li><a href="#">새소식</a></li>
+            </ul>
+        </nav>
+        <form action="javascript:alert('검색이 완료되었습니다.');" class="search-form">
+            <fieldset>
+                <legend>검색 폼</legend>
+                <input type="search" aria-label="검색어" placeholder="검색어를 입력하세요." required>
+                <input type="image" src="images/btn_search.png" alt="검색">
+            </fieldset>
+        </form>
+    </header>
+    <main class="content">콘텐츠</main>
+    <footer class="footer">푸터</footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="js/webcafe.js"></script>
+</body>
+
+</html>
