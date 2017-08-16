@@ -11,6 +11,22 @@
 }
 
 
+/* 숨김 콘텐츠 */
+
+legend,
+.readable-hidden {
+    background: yellow;
+    position: absolute;
+    left: -9999em;
+    font-size: 0;
+    line-height: 0;
+    width: 1px;
+    height: 1px;
+    margin: -1px 0 0 -1px;
+    overflow: hidden;
+}
+
+
 /* 링크 스타일 */
 
 a {
@@ -49,21 +65,22 @@ body {
 /* 메인 메뉴 제어 버튼 */
 
 .menubar-container {
-    background: yellow;
     position: absolute;
     top: 2rem;
     right: 2rem;
     width: 40px;
     height: 40px;
+    overflow: hidden;
 }
 
 .btn-menubar {
+    outline: 5px solid blue;
     border: 0;
     margin: 0;
     padding: 40px 0 0 0;
     width: 40px;
     height: 40px;
-    background: red;
+    background: transparent;
     overflow: hidden;
     cursor: pointer;
 }
@@ -76,10 +93,16 @@ body {
     background: #fff;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.2s;
 }
 
 .menubar-top {
     top: 0;
+}
+
+.menubar-act .menubar-top {
+    top: 50%;
+    transform: rotate(45deg);
 }
 
 .menubar-middle {
@@ -87,8 +110,17 @@ body {
     transform: translateY(-50%);
 }
 
+.menubar-act .menubar-middle {
+    transform: translate(-100%, -50%);
+}
+
 .menubar-bottom {
     bottom: 0;
+}
+
+.menubar-act .menubar-bottom {
+    top: 50%;
+    transform: rotate(-45deg);
 }
 
 
@@ -151,4 +183,102 @@ body {
 
 .main-menu a {
     display: block;
+}
+
+
+/* 검색 폼 */
+
+.search-form {
+    margin-top: 2rem;
+}
+
+.search-form fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.search-form input[type='search'] {
+    border: 1px solid #aaa;
+    padding: 5px 1px 1px 5px;
+    margin: 0 5px 0 0;
+    width: calc(100% - 50px);
+    /* rem 단위 사용 시  safari에서 버그가 발생할 수 있음. */
+    height: 35px;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+
+.search-form input[type='image'] {
+    width: 40px;
+    height: 40px;
+    border: 0;
+    vertical-align: middle;
+}
+
+
+/* 메인 콘텐츠 */
+
+.content {
+    padding: 2rem;
+}
+
+
+/* 웹카페 서적 */
+
+.book {
+    background: pink;
+}
+
+.subject {
+    height: 60px;
+    background: skyblue url('images/sprite_main.png') no-repeat;
+    padding-left: 70px;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.en-subject {
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.book-subject {}
+
+.book-subject .en-subject {
+    color: #abd375;
+}
+
+.book-cover {
+    margin: 1rem auto;
+    width: 60%;
+    text-align: center;
+}
+
+.book-cover img {
+    max-width: 100%;
+    height: auto;
+}
+
+.book-detail {
+    text-align: center;
+}
+
+.book-heading,
+.book-author-name {
+    display: inline-block;
+}
+
+.book-grade {
+    margin: 0;
+}
+
+.book-grade::before {
+    content: "★★★★★";
+    font-size: 2.5rem;
+    color: #afd371;
+}
+
+.book-summary {
+    line-height: 1.5;
 }
