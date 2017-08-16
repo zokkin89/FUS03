@@ -266,11 +266,12 @@ body {
 
 .book-heading,
 .book-author-name {
-    display: inline-block;
+    margin: 0;
 }
 
-.book-grade {
-    margin: 0;
+.book-author,
+.book-author-name {
+    display: inline-block;
 }
 
 .book-grade::before {
